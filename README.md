@@ -1,207 +1,77 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+💬 Room Chat – Real-Time Chat Application
 
-## Project info
+A simple real-time chat application that allows users to join chat rooms and exchange messages instantly using WebSocket technology.
 
-**URL**: https://lovable.dev/projects/9d509d9f-1d46-4964-9493-07ec894de979
+🚀 Objective
 
-## How can I edit this code?
+Build a minimal, fast, and responsive chat app where users can communicate in real time without refreshing the page.
 
-There are several ways of editing your application.
+🧩 Problem Statement
 
-**Use Lovable**
+Design and develop a real-time chat application that:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9d509d9f-1d46-4964-9493-07ec894de979) and start prompting.
+Supports multiple chat rooms
 
-Changes made via Lovable will be committed automatically to this repo.
+Allows users to send and receive messages instantly
 
-**Use your preferred IDE**
+Updates messages live without any page reload
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+✅ Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Real-time messaging using WebSockets
 
-Follow these steps:
+Multiple chat rooms support
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Clean and minimal user interface
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Instant message updates
 
-# Step 3: Install the necessary dependencies.
-npm i
+Lightweight and fast
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🛠️ Tech Stack
 
-**Edit a file directly in GitHub**
+Frontend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+HTML
 
-**Use GitHub Codespaces**
+CSS
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+JavaScript
 
-## What technologies are used for this project?
+Backend
 
-This project is built with:
+Node.js
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Socket.io (WebSocket library)
 
-## How can I deploy this project?
+Tools
 
-Simply open [Lovable](https://lovable.dev/projects/9d509d9f-1d46-4964-9493-07ec894de979) and click on Share -> Publish.
+VS Code (or any preferred code editor)
 
-## Can I connect a custom domain to my Lovable project?
+⚙️ How It Works
 
-Yes, you can!
+Users join a chat room.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Messages are sent through WebSocket connections.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-=======
-# Room Chat Owl
+Socket.io broadcasts messages instantly to all users in the same room.
 
-A modern, real-time chat application built with React, TypeScript, and Supabase. This application allows users to create and join chat rooms for seamless communication.
+Messages appear in real time without refreshing the page.
 
-## Features
+📦 Installation & Setup
+# Clone the repository
+git clone https://github.com/abhi20at04/room-chat-owl.git
 
-- **Real-time Messaging**: Instant message delivery using Supabase real-time subscriptions
-- **Room-based Chat**: Create and join different chat rooms
-- **User Presence**: See who's online in each room
-- **Responsive Design**: Works perfectly on desktop and mobile devices
-- **Modern UI**: Built with shadcn/ui components and Tailwind CSS
-- **TypeScript**: Full type safety throughout the application
+# Navigate to the project folder
+cd room-chat-owl
 
-## Tech Stack
+# Install dependencies
+npm install
 
-- **Frontend**: React 18, TypeScript, Vite
-- **UI Components**: shadcn/ui, Radix UI, Tailwind CSS
-- **Backend**: Supabase (Database, Real-time, Authentication)
-- **State Management**: TanStack Query (React Query)
-- **Routing**: React Router DOM
-- **Icons**: Lucide React
+# Start the server
+npm start
 
-## Getting Started
 
-### Prerequisites
+Open your browser and visit:
 
-- Node.js (version 18 or higher)
-- npm or yarn or bun
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abhi20at04/room-chat-owl.git
-   cd room-chat-owl
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   bun install
-   ```
-
-3. Set up Supabase:
-   - Create a new project at [supabase.com](https://supabase.com)
-   - Copy your project URL and anon key
-   - Create a `.env.local` file in the root directory:
-     ```
-     VITE_SUPABASE_URL=your_supabase_url
-     VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-     ```
-
-4. Set up the database:
-   - Run the SQL migrations in the `supabase/migrations` folder
-   - Or use the Supabase dashboard to create the necessary tables
-
-### Running the Application
-
-Start the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-bun dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Building for Production
-
-```bash
-npm run build
-# or
-yarn build
-# or
-bun run build
-```
-
-Preview the production build:
-```bash
-npm run preview
-# or
-yarn preview
-# or
-bun run preview
-```
-
-## Project Structure
-
-```
-src/
-├── components/
-│   ├── ui/          # Reusable UI components (shadcn/ui)
-│   ├── ChatInput.tsx
-│   ├── ChatMessage.tsx
-│   ├── OnlineUsers.tsx
-│   └── ...
-├── hooks/
-│   ├── useChat.ts   # Custom hook for chat functionality
-│   └── ...
-├── integrations/
-│   └── supabase/    # Supabase client and types
-├── lib/
-│   └── utils.ts     # Utility functions
-├── pages/
-│   ├── Index.tsx    # Main chat page
-│   └── NotFound.tsx # 404 page
-└── ...
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/your-feature-name`
-5. Open a pull request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Supabase](https://supabase.com/) for the backend services
-- [Vite](https://vitejs.dev/) for the fast build tool
->>>>>>> cec2533438e8ef1bc92c2d9a7b8ff6e6d90f2bff
+http://localhost:3000
