@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 200 95% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 80% 92%;
+    --secondary-foreground: 200 95% 25%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 185 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 200 95% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-bg: linear-gradient(135deg, hsl(200 95% 98%) 0%, hsl(185 85% 96%) 100%);
+    --gradient-chat: linear-gradient(to bottom, hsl(0 0% 100%) 0%, hsl(200 80% 98%) 100%);
+    --message-sent: 200 95% 45%;
+    --message-received: 0 0% 100%;
+    --shadow-message: 0 2px 8px hsl(220 15% 15% / 0.08);
+    --shadow-card: 0 4px 16px hsl(220 15% 15% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 14%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 14%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 200 95% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 185 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 200 95% 55%;
+
+    --gradient-bg: linear-gradient(135deg, hsl(220 25% 10%) 0%, hsl(220 25% 14%) 100%);
+    --gradient-chat: linear-gradient(to bottom, hsl(220 20% 14%) 0%, hsl(220 25% 12%) 100%);
+    --message-sent: 200 95% 45%;
+    --message-received: 220 20% 18%;
+    --shadow-message: 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
